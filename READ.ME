@@ -1,0 +1,54 @@
+I have read and understood the Academic Misconduct Policy for
+Undergraduates, the related sections 102.01-102.016 and 105.15 of the
+UC Santa Cruz Student Policies and Regulations Handbook,
+and the related sections of the class syllabus.
+-Karen Cariaga
+-CruzID: kccariag
+
+I wrote this assignment using only permitted sources
+that do not require citation, according to the syllabus.
+
+=========================================================================
+Description [pa4]:
+This program uses a variation of the IntVec ADT, but instead of having an
+array of IntVecs, it is an array of AdjWgt structs. The AdjWgt struct holds
+the an int value for to, and a double for wgt.
+The AdjWgtVec is then treated as a graph and depending on the task(Prim's or
+Djiktra's), greedyTree() creates the MST/SSSP by calling updateFringe().
+updateFringe() inserts edges into the priority queue and determines the 
+values for parent[], status[] and fringeWgt[].
+Prim's Algorithm will treat the input file as Undirected and Dijkstra's as
+directed.
+
+____________________________________________________________________
+How to Run:
+The program takes in flags (described below) and an input file from 
+command line arguments.
+
+Flags:
+	-P			Prim's Algorithm(Undirected)
+	-D			Djikstra's algorithm(Directed)
+
+Example commands lines:
+greedy04 -P filename.in 	Perform Prim's Algorithm on graph 
+							(Runs as undirected by default)
+greedy04 -D filename.in		Perform Djikstra's Algorithm on graph.
+							(Runs as directed by default)
+______________________________________________________________________
+Test Files: 
+test1.in
+	This is a simple test file that demonstrates basic functionality
+	with all edges being weighted.
+
+test2.in
+	test2.in is a test with a large amount of verticies, with very 
+	little input. It shows how output prints out with unconnected 
+	edges
+
+test3.in
+	test3.in has fully weighted input, with all edges being connected.
+
+test4.in
+	test4.in is a file with a group of unweighted edges, with only one 
+	weighted edge. This shows how prim's and Djikstra's will take the 
+	0.0 weight edge as a priority when finding the MST or SSSP.
